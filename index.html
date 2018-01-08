@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Quote Generator</title>
+   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ </head>
+ <body>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    
+  <!-- container and jumbotron from bootstrap -->
+<div class="container">
+  <div class="jumbotron">
+     <h1>Quote Generator</h1>
+    </div> 
+
+
+var total = 0;
+var count = 0;
+        $.ajax({
+            method: 'GET',
+            url: 'https://talaikis.com/api/quotes/'
+        }).done(function (response) {
+            console.log(response);
+            for (i=0;i<response.length;i++) {
+                // console.log("cat",response.cat);
+                if (response[i].cat == "science") {
+                    console.log(response[i].quote);
+                    console.log(response[i].cat);
+                    console.log("--------------");
+                    count++;
+                }
+                total++;
+            }
+            console.log("count",count);
+            console.log("total",total);
+
+    
+
+        });
+
+</script>

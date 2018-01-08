@@ -1,0 +1,36 @@
+section p, .container-fluid {
+  text-align: center;
+  padding-bottom: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  color: black;
+  font-family: cursive, sans-serif;
+}
+body {
+    background-image: url("https://i.imgur.com/VKTPd2M.jpg");
+  position: relative;
+}
+.intro { color: white; }
+
+.well {
+  margin-left: 3%;
+  margin-right: 3%;
+  background-color: #FFFFFF;
+  color:black;
+}
+footer {
+  background-color: black;
+  color: white;
+  line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  position: relative;
+  text-align: center;
+  font-family: cursive, sans-serif;
+}
+section {
+  min-height: 90vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  bottom: 10px;
+}
