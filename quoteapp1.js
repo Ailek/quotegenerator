@@ -10,7 +10,7 @@ var count = 0;
 var programming = function (){
   $.ajax({
             method: 'GET',
-            url: 'http://quotes.stormconsultancy.co.uk/quotes.json'
+            url: 'https://quotes.stormconsultancy.co.uk/quotes.json'
         }).done(function (response) {
         	var randomValue = response[Math.floor(response.length * Math.random())];
         	$(".quote-text").text(randomValue.quote);
